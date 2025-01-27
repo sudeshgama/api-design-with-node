@@ -1,6 +1,8 @@
 import express from 'express';
 import router from './router';
 import morgan from 'morgan';
+import { protect } from './modules/auth';
+import { createUser, signIn } from './handlers/user';
 
 const app = express();
 
@@ -20,6 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(customLogger('customer logger'));
 
 
-app.use('/api', router);  // /api/products
+app.use('/api', protect, router);  // /api/products
+
+app.post('/user', createUser);
+app.post('/signin', signIn);
 
 export default app;
