@@ -21,6 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 // });
 app.use(customLogger('customer logger'));
 
+app.get('/', (req, res, next) => {
+  res.json({ message: 'Hello There' });
+})
+
 
 app.use('/api', protect, router);  // /api/products
 
