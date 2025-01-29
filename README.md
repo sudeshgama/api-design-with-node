@@ -7,3 +7,5 @@
 # open the local prisma UI - npx prisma studio
 
 # npx prisma migrate dev
+
+# NODE_ENV string that tells you what mode you are running in development(default), production and testing
