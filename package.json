@@ -21,6 +21,8 @@
     "express-validator": "^7.2.1",
     "i": "^0.3.7",
     "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "lodash.merge": "^4.6.2",
     "morgan": "^1.10.0",
     "npm": "^11.0.0"
   },
